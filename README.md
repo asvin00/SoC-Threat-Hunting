@@ -122,16 +122,7 @@ SoC-Threat-Hunting/
 │   ├── README.md
 │   ├── nmap-splunk-integration.py
 │   └── requirements.txt
-│
-├── 📂 12-Final-Project/
-│   ├── README.md
-│   └── project-summary.md
-│
-├── 📂 Scripts/
-│   ├── bash/
-│   ├── powershell/
-│   └── python/
-│
+|
 ├── 📂 Configuration-Files/
 │   ├── network-configs/
 │   ├── splunk-configs/
@@ -142,10 +133,6 @@ SoC-Threat-Hunting/
 │   ├── SETUP-GUIDE.md
 │   ├── TROUBLESHOOTING.md
 │   └── INTERVIEW-PREP.md
-│
-├── 📂 Interview-Materials/
-│   ├── PROJECT-SUMMARY.md
-│   └── TALKING-POINTS.md
 │
 └── LICENSE
 ```
