@@ -1,0 +1,45 @@
+# Basic Splunk Searches
+
+## View All Events
+index=security
+index=windows
+index=*
+
+## Failed Login Events
+index=security EventCode=4625
+
+## Successful Login Events
+index=security EventCode=4624
+
+## Process Execution
+index=windows EventID=1
+
+## Network Connections
+index=windows EventID=3
+
+## Registry Modifications
+index=windows EventID=13
+
+## Count Events by User
+index=security | stats count by User
+
+## Count Events by Event Code
+index=security | stats count by EventCode
+
+## Top 10 Process Names
+index=windows EventID=1 | stats count by Image | top 10
+
+## Events Over Time
+index=security | timechart count by EventCode
+
+## Failed Logins by Source IP
+index=security EventCode=4625 | stats count by SourceIP
+
+## Suspicious Processes
+index=windows EventID=1 (Image=*cmd.exe* OR Image=*powershell.exe*)
+
+## PowerShell Execution
+index=windows EventID=1 Image=*powershell.exe*
+
+## Unusual Network Connections
+index=windows EventID=3 DestinationPort!=80 DestinationPort!=443 DestinationPort!=53

@@ -1,0 +1,63 @@
+# MITRE ATT&CK Mapping
+
+{
+  "detection_coverage": {
+    "total_tactics": 14,
+    "covered_tactics": 6,
+    "coverage_percentage": 42.86,
+    "mappings": [
+      {
+        "detection_rule": "Brute Force Attempt Detection",
+        "mitre_tactic": "Credential Access",
+        "mitre_technique": "T1110",
+        "technique_name": "Brute Force",
+        "sub_technique": "T1110.001 - Password Guessing"
+      },
+      {
+        "detection_rule": "PowerShell Execution Detected",
+        "mitre_tactic": "Execution",
+        "mitre_technique": "T1059",
+        "technique_name": "Command and Scripting Interpreter",
+        "sub_technique": "T1059.001 - PowerShell"
+      },
+      {
+        "detection_rule": "Suspicious Command Line Detected",
+        "mitre_tactic": "Discovery",
+        "mitre_technique": "T1087",
+        "technique_name": "Account Discovery"
+      },
+      {
+        "detection_rule": "Suspicious Network Connection Detected",
+        "mitre_tactic": "Discovery",
+        "mitre_technique": "T1046",
+        "technique_name": "Network Service Discovery"
+      },
+      {
+        "detection_rule": "Credential Dumping Attempt Detected",
+        "mitre_tactic": "Credential Access",
+        "mitre_technique": "T1003",
+        "technique_name": "OS Credential Dumping",
+        "sub_technique": "T1003.001 - LSASS Memory"
+      },
+      {
+        "detection_rule": "Lateral Movement Detected",
+        "mitre_tactic": "Lateral Movement",
+        "mitre_technique": "T1021",
+        "technique_name": "Remote Services",
+        "sub_technique": "T1021.002 - SMB/Windows Admin Shares"
+      }
+    ]
+  },
+  "gaps": [
+    "T1595 - Active Scanning (Reconnaissance)",
+    "T1589 - Gather Victim Identity Information (Reconnaissance)",
+    "T1566 - Phishing (Initial Access)",
+    "T1547 - Boot or Logon Autostart Execution (Persistence)",
+    "T1548 - Abuse Elevation Control Mechanism (Privilege Escalation)",
+    "T1197 - BITS Jobs (Defense Evasion)",
+    "T1557 - Man-in-the-Middle (Collection)",
+    "T1071 - Application Layer Protocol (Command & Control)",
+    "T1041 - Exfiltration Over C2 Channel (Exfiltration)",
+    "T1531 - Account Access Removal (Impact)"
+  ]
+}

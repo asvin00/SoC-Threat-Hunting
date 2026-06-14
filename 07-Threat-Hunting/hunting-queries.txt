@@ -1,0 +1,41 @@
+# Threat Hunting Queries
+
+## Hunt 1: Unauthorized Admin Access
+index=security EventCode=4624 logon_type=3 user=*admin*
+| stats count, earliest, latest by src_ip, user
+| where count > 5
+
+## Hunt 2: Persistence - Registry Run Keys
+index=windows EventID=13 TargetObject=*\\Run\\*
+| stats count by Computer, TargetObject
+| where count > 2
+
+## Hunt 3: Credential Dumping
+index=windows EventID=10 TargetImage=*lsass.exe*
+| stats count, earliest, latest by Computer, SourceImage
+| where count > 1
+
+## Hunt 4: Lateral Movement
+index=windows EventID=3 DestinationPort=445
+| stats dc(DestinationIp) as unique_targets by Computer
+| where unique_targets > 10
+
+## Hunt 5: Data Exfiltration
+index=windows EventID=3 DestinationPort=443
+| stats bytes_out by DestinationIp, Computer
+| where bytes_out > 1000000
+
+## Hunt 6: Process Injection
+index=windows EventID=8
+| stats count by Computer, TargetImage, SourceImage
+| where count > 2
+
+## Hunt 7: Command Line Obfuscation
+index=windows EventID=1 
+(CommandLine=*base64* OR CommandLine=*cmd /c* OR CommandLine=*powershell -enc*)
+| stats count by Computer, CommandLine
+
+## Hunt 8: Scheduled Task Creation
+index=windows EventID=600
+| stats count by Computer, TaskName
+| where count > 5

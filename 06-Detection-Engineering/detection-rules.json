@@ -1,0 +1,64 @@
+# Detection Rules JSON
+
+[
+  {
+    "name": "Brute Force Attempt Detection",
+    "search": "index=security EventCode=4625 | stats count by src_ip | where count > 5",
+    "alert_type": "real-time",
+    "threshold": "count > 5 in 5 minutes",
+    "action": "Send email alert",
+    "mitre_technique": "T1110",
+    "mitre_tactic": "Credential Access",
+    "severity": "High"
+  },
+  {
+    "name": "PowerShell Execution Detected",
+    "search": "index=windows EventID=1 Image=*powershell.exe* | stats count by Computer",
+    "alert_type": "real-time",
+    "threshold": "Any execution",
+    "action": "Log and dashboard highlight",
+    "mitre_technique": "T1059.001",
+    "mitre_tactic": "Execution",
+    "severity": "Medium"
+  },
+  {
+    "name": "Suspicious Command Line Detected",
+    "search": "index=windows EventID=1 (CommandLine=*net user* OR CommandLine=*wget* OR CommandLine=*curl*)",
+    "alert_type": "real-time",
+    "threshold": "Any match",
+    "action": "Alert and ticket creation",
+    "mitre_technique": "T1087",
+    "mitre_tactic": "Discovery",
+    "severity": "Medium"
+  },
+  {
+    "name": "Suspicious Network Connection Detected",
+    "search": "index=windows EventID=3 (DestinationPort=53 OR DestinationPort=445 OR DestinationPort=139 OR DestinationPort=3389)",
+    "alert_type": "real-time",
+    "threshold": "Any connection",
+    "action": "Alert",
+    "mitre_technique": "T1046",
+    "mitre_tactic": "Discovery",
+    "severity": "High"
+  },
+  {
+    "name": "Credential Dumping Attempt Detected",
+    "search": "index=windows EventID=10 TargetImage=*lsass.exe* SourceImage!=*winlogon.exe*",
+    "alert_type": "real-time",
+    "threshold": "Any unauthorized access",
+    "action": "Critical alert",
+    "mitre_technique": "T1003",
+    "mitre_tactic": "Credential Access",
+    "severity": "Critical"
+  },
+  {
+    "name": "Lateral Movement Detected",
+    "search": "index=windows EventID=3 (DestinationPort=445 OR DestinationPort=139 OR DestinationPort=3389) | stats dc(DestinationIp) as unique_ips by ComputerName | where unique_ips > 3",
+    "alert_type": "real-time",
+    "threshold": "3+ unique IPs",
+    "action": "Critical alert",
+    "mitre_technique": "T1021",
+    "mitre_tactic": "Lateral Movement",
+    "severity": "High"
+  }
+]
