@@ -132,8 +132,7 @@ SoC-Threat-Hunting/
 │   ├── ARCHITECTURE.md
 │   ├── SETUP-GUIDE.md
 │   ├── TROUBLESHOOTING.md
-│   └── INTERVIEW-PREP.md
-│
+│ 
 └── LICENSE
 ```
 
@@ -173,7 +172,6 @@ SoC-Threat-Hunting/
 ✅ **3 Interactive Dashboards** for real-time monitoring
 ✅ **Python Automation Scripts** for security tasks
 ✅ **Complete Configuration Files** ready to deploy
-✅ **Interview Preparation Materials** for job interviews
 ✅ **Troubleshooting Guides** for common issues
 
 ---
@@ -196,7 +194,6 @@ SoC-Threat-Hunting/
 - **[ARCHITECTURE.md](Documentation/ARCHITECTURE.md)** - System design
 - **[SETUP-GUIDE.md](Documentation/SETUP-GUIDE.md)** - Installation instructions
 - **[TROUBLESHOOTING.md](Documentation/TROUBLESHOOTING.md)** - Common issues
-- **[INTERVIEW-PREP.md](Interview-Materials/INTERVIEW-PREP.md)** - Interview prep
 
 ---
 
@@ -207,14 +204,6 @@ SoC-Threat-Hunting/
 - Phases 3-5: 2-3 hours (configuration)
 - Phases 6-9: 4-5 hours (detection)
 - Phases 10-12: 3-5 hours (automation & finalization)
-
----
-
-## 🎓 Interview Talking Points
-
-*"I built a complete SOC environment demonstrating enterprise security operations. The platform includes centralized log collection with Splunk, endpoint monitoring with Sysmon, 6 detection rules for common attacks, interactive dashboards for real-time visibility, threat hunting capability, and Python automation for security scanning."*
-
-See **[TALKING-POINTS.md](Interview-Materials/TALKING-POINTS.md)** for more.
 
 ---
 
