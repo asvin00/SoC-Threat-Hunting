@@ -138,45 +138,7 @@ Built a complete Security Operations Center (SOC) platform using Splunk SIEM to 
 
 ---
 
-## 💼 Resume Bullet Points
 
-### Project Section:
-
-**SOC & Threat Hunting Platform Using Splunk | June 2025**
-
-Built a fully functional Security Operations Center (SOC) simulation platform using Splunk SIEM to demonstrate real-world security operations, threat detection, and incident investigation capabilities.
-
-**Key Achievements:**
-- Deployed Splunk SIEM with centralized log collection from Windows endpoint (Sysmon)
-- Configured Splunk Universal Forwarder for continuous log transmission (10,000+ events/day)
-- Developed 6 detection rules mapping to MITRE ATT&CK framework (42% tactic coverage)
-- Created 8 threat hunting queries for proactive threat discovery
-- Built 3 interactive security dashboards for real-time monitoring and KPI tracking
-- Simulated real-world attacks (brute-force, network recon, lateral movement) with 83% detection accuracy
-- Automated security tasks using Python (Nmap scanning, log generation, threat intelligence enrichment)
-- Documented complete architecture and operational procedures
-
-**Technologies Used:**
-- Splunk Enterprise (SIEM)
-- Sysmon (endpoint monitoring)
-- Windows Security Event Log
-- Splunk Universal Forwarder
-- Python 3 (automation)
-- VirtualBox (virtual infrastructure)
-- MITRE ATT&CK Framework
-
-**Skills Demonstrated:**
-- SIEM Administration & Configuration
-- Log Analysis & Correlation
-- Detection Engineering & Rule Development
-- Threat Hunting & Investigation
-- Incident Response Workflows
-- Windows Security Monitoring
-- Network Analysis
-- Security Automation (Python/Bash)
-- Cybersecurity Frameworks (MITRE ATT&CK)
-
----
 
 ## ✅ Final Project Verification Checklist
 
