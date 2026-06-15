@@ -54,7 +54,7 @@ index=security EventCode=4625
 
 ### Search 3: Process Execution
 ```
-index=windows EventID=1
+index=windows EventCode=1
 ```
 
 **What it does**: Show all processes that executed
@@ -64,7 +64,7 @@ index=windows EventID=1
 
 ### Search 4: Network Connections
 ```
-index=windows EventID=3
+index=windows EventCode=3
 ```
 
 **What it does**: Show network connections from endpoint
@@ -74,7 +74,7 @@ index=windows EventID=3
 
 ### Search 5: Registry Modifications
 ```
-index=windows EventID=13
+index=windows EventCode=13
 ```
 
 **What it does**: Show registry value changes (persistence indicator)
