@@ -142,8 +142,7 @@ SoC-Threat-Hunting/
 ## 📞 Support
 
 1. Check **[TROUBLESHOOTING.md](Documentation/TROUBLESHOOTING.md)**
-2. Review phase-specific README files
-3. Check **[References](References/)** for additional docs
+2. Review phase-specific README file
 
 ---
 
